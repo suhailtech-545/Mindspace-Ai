@@ -1,0 +1,25 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "env": {
+    "VITE_API_URL": {
+      "description": "Backend API URL",
+      "example": "https://mental-health-api.railway.app"
+    },
+    "VITE_GEMINI_API_KEY": {
+      "description": "Google Gemini API Key",
+      "example": "AIzaSy..."
+    },
+    "VITE_ML_API_URL": {
+      "description": "ML Service API URL",
+      "example": "https://mental-health-ml.railway.app"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Root Python requirements for MindSpace AI
+# For classifier only, installing ml_api/requirements.txt is enough.
+-r ml_api/requirements.txt

@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=3600"
+
+[env.production]
+  VITE_API_URL = "https://mental-health-api.railway.app"
+  VITE_GEMINI_API_KEY = "AIzaSy..."
+  VITE_ML_API_URL = "https://mental-health-ml.railway.app"
+
+[env.staging]
+  VITE_API_URL = "https://staging-api.railway.app"
+  VITE_GEMINI_API_KEY = "AIzaSy..."
+  VITE_ML_API_URL = "https://staging-ml.railway.app"
