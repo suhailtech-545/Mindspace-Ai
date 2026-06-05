@@ -291,7 +291,6 @@ Buka TensorBoard:
 tensorboard --logdir ml_api/training/tensorboard_logs
 ```
 
-## Checklist Perbaikan
 
 ### Full Stack Developer
 
@@ -321,16 +320,6 @@ tensorboard --logdir ml_api/training/tensorboard_logs
 - A/B testing: `data_science/02_ab_testing_evaluation.py`.
 - Laporan teknis: `data_science/technical_report.md`.
 
-## File yang Jangan Di-upload ke GitHub
 
-Pastikan file berikut tidak ikut commit:
 
-```text
-.env
-.venv/
-node_modules/
-dist/
-build/
-__pycache__/
-*.pyc
-```
+
